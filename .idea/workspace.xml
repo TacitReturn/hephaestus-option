@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7139ebe-6bc5-4c50-9380-dbd82f6057a4" name="Default Changelist" comment="" />
+    <list default="true" id="c7139ebe-6bc5-4c50-9380-dbd82f6057a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +22,9 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -144,6 +149,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lFp84P1HkSnbX6hZcAECMgYIx9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -192,7 +198,7 @@
       <workItem from="1607202901702" duration="1425000" />
       <workItem from="1607204369797" duration="127000" />
       <workItem from="1607204518790" duration="2635000" />
-      <workItem from="1607650729690" duration="2502000" />
+      <workItem from="1607650729690" duration="3334000" />
     </task>
     <servers />
   </component>

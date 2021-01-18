@@ -9,8 +9,8 @@ use Tests\TestCase;
 class PagesTest extends TestCase
 {
     /**
-     * A basic feature test example.
-     *
+     * HTTP request test to landing page.
+     * @test
      * @return void
      */
     public function test_can_get_landing()
@@ -20,6 +20,11 @@ class PagesTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /**
+     *  HTTP request test to about-us page.
+     * @test
+     * @return void
+     */
     public function test_can_get_about()
     {
         $response = $this->get('/about-us');
@@ -27,6 +32,11 @@ class PagesTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /**
+     * HTTP request test to contact-us page.
+     * @test
+     * @return void
+     */
     public function test_can_get_contact()
     {
         $response = $this->get('/contact-us');

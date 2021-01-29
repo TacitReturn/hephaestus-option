@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactFormController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 /*
@@ -15,7 +16,8 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', [PagesController::class, 'index'])->name('index');
 Route::get('about-us', [PagesController::class, 'about'])->name('about-us');
-Route::get('contact-us', [PagesController::class, 'contact'])->name('contact-us');
+Route::get('contact-us', [ContactFormController::class, 'create'])->name('contact-us');
+Route::post('contact-us', [ContactFormController::class, 'store'])->name('contact-us');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

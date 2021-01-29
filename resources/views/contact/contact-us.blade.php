@@ -9,23 +9,26 @@
             <h2 class="font-weight-bold text-center h1 my-5">Contact us</h2>
             <!-- Section description -->
             <p class="text-center dark-text mb-5 mx-auto w-responsive">
-                
+
             </p>
 
             <div class="row">
 
                 <!-- Grid column -->
                 <div class="col-md-8 col-xl-9">
-                    <form>
-
+                    <form action="/contact-us" method="POST">
+                        @csrf
                         <!-- Grid row -->
                         <div class="row">
 
                             <!-- Grid column -->
                             <div class="col-md-6">
                                 <div class="md-form">
-                                    <input type="text" id="contact-name" class="form-control">
+                                    <input value="{{ old('name') }}" name="name" type="text" id="contact-name" class="form-control">
                                     <label for="contact-name" class="">Your name</label>
+                                </div>
+                                <div class="text-danger font-weight-bold">
+                                    {{  $errors->first('name')}}
                                 </div>
                             </div>
                             <!-- Grid column -->
@@ -33,8 +36,11 @@
                             <!-- Grid column -->
                             <div class="col-md-6">
                                 <div class="md-form">
-                                    <input type="text" id="contact-email" class="form-control">
+                                    <input value="{{ old('email') }}" name="email" type="text" id="contact-email" class="form-control">
                                     <label for="contact-email" class="">Your email</label>
+                                </div>
+                                <div class="text-danger font-weight-bold">
+                                    {{ $errors->first('email') }}
                                 </div>
                             </div>
                             <!-- Grid column -->
@@ -46,9 +52,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="md-form">
-                                    <input type="text" id="contact-Subject" class="form-control">
+                                    <input value="{{ old('subject') }}" name="subject" type="text" id="contact-Subject" class="form-control">
                                     <label for="contact-Subject" class="">Subject</label>
                                 </div>
+                            </div>
+                            <div class="text-danger font-weight-bold">
+                                {{ $errors->first('subject') }}
                             </div>
                         </div>
                         <!-- Grid row -->
@@ -60,19 +69,20 @@
                             <div class="col-md-12">
 
                                 <div class="md-form">
-                                    <textarea type="text" id="contact-message" class="md-textarea form-control" rows="3"></textarea>
+                                    <textarea name="message" type="text" id="contact-message" class="md-textarea form-control" rows="3">{{ old('message') }}</textarea>
                                     <label for="contact-message">Your message</label>
                                 </div>
 
                             </div>
+                            <div class="text-danger font-weight-bold">
+                                {{ $errors->first('message') }}
+                            </div>
                         </div>
                         <!-- Grid row -->
-
+                        <div class="text-center text-md-left mb-4">
+                            <button id="" class="btn btn-light-blue btn-block">Send</button>
+                        </div>
                     </form>
-
-                    <div class="text-center text-md-left mb-4">
-                        <a id="contactButton" class="btn btn-light-blue btn-block">Send</a>
-                    </div>
                 </div>
                 <!-- Grid column -->
 

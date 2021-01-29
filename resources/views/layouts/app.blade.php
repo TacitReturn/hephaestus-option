@@ -36,13 +36,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
                         <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('about-us') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {{ Request::is('contact-us') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('contact-us') }}">Contact</a>
                     </li>
                 </ul>
